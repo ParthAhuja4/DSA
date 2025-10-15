@@ -6,7 +6,8 @@ public class LinearSearch {
         Scanner sc = new Scanner(System.in);
         int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
         System.out.println("ENTER TO FIND");
-        int no = sc.nextInt();
+        int no = sc.nextInt(); // Reads the integer, leaves '\n'
+        sc.nextLine(); // Consumes the leftover '\n'
         System.out.println(search(no, arr));
         sc.close();
 
