@@ -1,6 +1,6 @@
 public class InfiniteSortedArray {
     public static void main(String[] args) {
-        int[] arr = { 3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170 }; // INFINITE ARR MEAANS YO CANT USE ARR.LENGTH
+        int[] arr = { 3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170 }; // INFINITE ARR MEANS YO CANT USE ARR.LENGTH
         int target = 10;
         System.out.println(ans(arr, target));
     }
