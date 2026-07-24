@@ -2,33 +2,22 @@ package Arrays.Sorting;
 
 import java.util.Arrays;
 
-/*
- * BEST  -> n log n
- * AVG   -> n log n
- * WORST -> n log n
- * STABLE
- * NOT ADAPTIVE
- * Divide and Conquer algorithm
- * Recursively splits the array into halves and merges them in sorted order
- * Requires O(n) extra space for merging
- */
-
 public class MergeSort {
     public static void main(String[] args) {
         int[] arr = { 6, 5, 4, 32, 1 };
-        int[] sortedArr = sort(arr);
+        int[] sortedArr = sort(arr, 0, arr.length);
         System.out.println(Arrays.toString(sortedArr));
     }
 
-    public static int[] sort(int[] arr) {
-        if (arr.length == 1) {
-            return arr;
+    public static int[] sort(int[] arr, int start, int end) {
+        if (end - start == 1) {
+            return new int[] { arr[start] };
         }
 
-        int mid = arr.length / 2;
+        int mid = (start + end) / 2;
 
-        int[] left = sort(Arrays.copyOfRange(arr, 0, mid));
-        int[] right = sort(Arrays.copyOfRange(arr, mid, arr.length));
+        int[] left = sort(arr, start, mid);
+        int[] right = sort(arr, mid, end);
 
         return merge(left, right);
     }
@@ -42,28 +31,20 @@ public class MergeSort {
 
         while (i < first.length && j < second.length) {
             if (first[i] < second[j]) {
-                mix[k] = first[i];
-                i++;
+                mix[k++] = first[i++];
             } else {
-                mix[k] = second[j];
-                j++;
+                mix[k++] = second[j++];
             }
-            k++;
         }
 
         while (i < first.length) {
-            mix[k] = first[i];
-            i++;
-            k++;
+            mix[k++] = first[i++];
         }
 
         while (j < second.length) {
-            mix[k] = second[j];
-            j++;
-            k++;
+            mix[k++] = second[j++];
         }
 
         return mix;
     }
-
 }
