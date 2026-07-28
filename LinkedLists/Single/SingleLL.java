@@ -118,7 +118,7 @@ public class SingleLL {
 
         Node prev = this.get(index - 1);
         Node toDltNode = prev.next;
-        prev.next = prev.next.next;
+        prev.next = toDltNode.next;
         toDltNode.next = null;
         this.size--;
     }
@@ -132,6 +132,7 @@ public class SingleLL {
         }
         Node currNode = this.head;
         Node prevNode = null;
+        Node oldHead = this.head;
 
         while (currNode != null) {
             Node nextNode = currNode.next;
@@ -139,7 +140,8 @@ public class SingleLL {
             prevNode = currNode;
             currNode = nextNode;
         }
-        head = prevNode;
+        this.tail = oldHead;
+        this.head = prevNode;
     }
 
 }
