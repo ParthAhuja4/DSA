@@ -175,7 +175,7 @@ public class DoublyLL {
 
         while (currNode != null) {
             Node nextNode = currNode.next;
-            currNode.next = currNode.prev;
+            currNode.next = currNode.prev;// beep
             currNode.prev = nextNode;
             currNode = nextNode;
         }

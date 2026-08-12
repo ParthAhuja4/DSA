@@ -136,7 +136,7 @@ public class SingleLL {
 
         while (currNode != null) {
             Node nextNode = currNode.next;
-            currNode.next = prevNode;
+            currNode.next = prevNode; // beep
             prevNode = currNode;
             currNode = nextNode;
         }
