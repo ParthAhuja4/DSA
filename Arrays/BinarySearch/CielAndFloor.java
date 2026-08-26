@@ -1,3 +1,5 @@
+package Arrays.BinarySearch;
+
 public class CielAndFloor {
     public static void main(String[] args) {
         int[] sortedArr = { 0, 1, 2, 3, 5, 6, 8 };

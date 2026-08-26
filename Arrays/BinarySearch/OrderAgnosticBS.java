@@ -1,5 +1,7 @@
 //WHAT IF WE DONT KNOW WHICH ORDER IS ARRAY SORTED
 
+package Arrays.BinarySearch;
+
 public class OrderAgnosticBS {
     public static void main(String[] args) {
         int[] arr = { 99, 80, 75, 22, 11, 10, 5, 2, -3 };

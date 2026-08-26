@@ -1,3 +1,5 @@
+package Arrays.LinearSearch;
+
 public class EvenDigits {
     public static void main(String[] args) {
         int[] arr = { 1, 3, 5, 7, 2, 6, 8, 101, -1802 };

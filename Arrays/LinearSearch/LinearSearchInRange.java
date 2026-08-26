@@ -1,3 +1,5 @@
+package Arrays.LinearSearch;
+
 import java.util.Scanner;
 
 public class LinearSearchInRange {

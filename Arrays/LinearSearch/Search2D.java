@@ -1,3 +1,5 @@
+package Arrays.LinearSearch;
+
 public class Search2D {
     public static void main(String[] args) {
         int[][] arr2D = { { 23, 4, 1 }, { 1, 2, 3 }, { 11, 12, 15 } };
